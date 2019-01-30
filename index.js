@@ -14,14 +14,6 @@ window.addEventListener('load', function() {
   setUp();
 });
 
-/*
-  TODO
-  display answers properly,
-  when answer clicked, updated state and show next answer
-  add end condition
-  add display result
-*/
-
 // generate questions, build initial DOM state
 function setUp() {
   const main = document.querySelector('main');
@@ -31,6 +23,7 @@ function setUp() {
 // adds startbtn to DOM
 function generateStartBtn(main) {
   const startBtn = document.createElement('button');
+  startBtn.setAttribute('id', 'start-btn')
   startBtn.innerText = 'Start';
   startBtn.addEventListener('click', () => displayNextQuestion(main));
   main.appendChild(startBtn);
@@ -53,6 +46,7 @@ function displayResult(main) {
 
 function generateResultHTMl() {
   let resultContainer = document.createElement('div');
+  resultContainer.classList.add('Result')
   let resultsTitle = document.createElement('h2');
   resultsTitle.innerText = 'Congratulations';
   let results = document.createElement('h4');
@@ -79,7 +73,7 @@ function getResult() {
 function generateQuestionHTML(question) {
   // question container
   let questionContainer = document.createElement('div');
-  questionContainer.classList.add('question');
+  questionContainer.classList.add('Questions');
 
   // question text
   let questionText = document.createElement('h3');
@@ -112,6 +106,7 @@ function generateAnswersHTML(answers = []) {
 function generateAnswerHTML(answer = {}) {
   // <label for="huey">Huey</label>
   let answerContainer = document.createElement('div');
+  answerContainer.classList.add('Answer')
 
   let answerLabel = document.createElement('label');
   answerLabel.setAttribute('for', answer.id);

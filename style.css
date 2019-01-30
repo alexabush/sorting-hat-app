@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+body, html, .App {
+  height: 100%;
+}
+
+h1 {
+  padding: 1rem;
+  font-size: 2.8rem;
+  color: red;
+}
+
+.App {
+  text-align: center;
+  background:
+    url('./sorting_hat_wallpaper.jpg')
+    50% center
+    no-repeat;
+}
+
+main {
+  margin: auto;
+  width: 400px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 250px;
+}
+
+#start-btn {
+  color: maroon;
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+.Result {
+  font-size: 1.2rem;
+}
+
+.Questions {
+}
+
+.Questions h3 {
+  padding: 5px 0;
+  font-size: 1.2rem;
+}
+
+.answers {
+  max-width: 600px;
+}
+
+.Answer {
+  padding: 5px 0;
+  font-size: 1.2rem;
+}
+
+.Answer label {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
